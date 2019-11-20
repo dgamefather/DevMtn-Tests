@@ -1,5 +1,39 @@
+var homeCommands = {
+    app: function (data) {
+        this
+            .waitForElementPresent('@page')
+            .click('@start')
+            .waitForElementPresent(`#loanTypes option[value="${data.loan}"]`)
+            .click(`#loanTypes option[value="${data.loan}"]`)
+            .waitForElementPresent(`#propertyTypes option[value="${data.prop}"]`)
+            .click(`#propertyTypes option[value="${data.prop}"]`)
+            .click('@next')
+            .setValue('@city', data.city)
+            .click('@next')
+            .click('@prime')
+            .click('@no')
+            .click('@yes')
+            .setValue('@price', data.price)
+            .setValue('@down', data.price)
+            .click('@next')
+            .click(`@${data.credit}`)
+            .click(`@${data.bank}`)
+            .setValue('@street', data.street)
+            .setValue('@zip', data.zip)
+            .click('@next')
+            .setValue('@first', data.firstName)
+            .setValue('@last', data.lastName)
+            .setValue('@email', data.email)
+            .click('@next')
+            .verify.containsText('@nameForm', data.firstName)
+            .click('@redo');
+        return this;
+    },
+}
+
 module.exports = {
     url: 'http://localhost:3000',
+    commands: [homeCommands],
     elements: {
         // Page
         'page': ('.home-text'),
@@ -22,7 +56,7 @@ module.exports = {
         'bank': ('[value="Has had bankruptcy before"]'),
         'fore': ('[value="Has had a foreclosure before"]'),
         'both': ('[value="Has had both a foreclosure and a bankruptcy"]'),
-        
+
         // Fields
         'city': ('[name="city"]'),
         'price': ('[name="price"]'),
