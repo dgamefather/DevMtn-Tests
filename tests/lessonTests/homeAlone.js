@@ -1,6 +1,6 @@
 // Page Object
 var home = {};
-var traps = require('../testAssets/homeTraps');
+var traps = require('../../testAssets/lessonTestAssets/homeTraps');
 module.exports = {
     beforeEach: browser => {
         home = browser.page.homeAlonePage();
