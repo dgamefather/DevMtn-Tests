@@ -1,22 +1,21 @@
-10:56:54.558 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
-10:56:54.618 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
-2019-11-21 10:56:54.667:INFO::main: Logging initialized @281ms to org.seleniumhq.jetty9.util.log.StdErrLog
-10:56:54.911 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
-10:56:55.293 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
-10:56:55.613 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+10:30:48.637 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+10:30:48.683 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
+2019-11-22 10:30:48.716:INFO::main: Logging initialized @206ms to org.seleniumhq.jetty9.util.log.StdErrLog
+10:30:48.863 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+10:30:49.175 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
+10:30:49.365 INFO [ActiveSessionFactory.apply] - Capabilities are: {
   "acceptSslCerts": true,
   "browserName": "chrome",
   "chromeOptions": {
     "w3c": false
   },
-  "name": "I Was Framed"
+  "name": "Spam Bot\\class Craft"
 }
-10:56:55.615 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
-Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 5899
+10:30:49.366 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 32274
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[1574359018.915][WARNING]: Timed out connecting to Chrome, retrying...
-10:57:00.933 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
-10:57:01.188 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 1997f8e28184756a04dad026401b4cbb (org.openqa.selenium.chrome.ChromeDriverService)
-[1574359029.854][WARNING]: Timed out connecting to Chrome, retrying...
-10:57:12.363 INFO [ActiveSessions$1.onStop] - Removing session 1997f8e28184756a04dad026401b4cbb (org.openqa.selenium.chrome.ChromeDriverService)
+[1574443852.561][WARNING]: Timed out connecting to Chrome, retrying...
+10:30:54.579 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
+10:30:54.720 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 165d6da12e0894d3be5ea623c5d3742a (org.openqa.selenium.chrome.ChromeDriverService)
+10:31:15.979 INFO [ActiveSessions$1.onStop] - Removing session 165d6da12e0894d3be5ea623c5d3742a (org.openqa.selenium.chrome.ChromeDriverService)
