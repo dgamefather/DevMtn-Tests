@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "20ce591e-4c02-464a-934c-e7936abc7b5a",
+		"name": "Employee Manager",
+		"description": "11-21-19\nRequirements found here:\nhttps://devmountain-qa.github.io/employee-manager-v2/",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Employee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a51c3597-402f-4992-a572-e4ed4930e8bb",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([201,202]);",
+							"});",
+							"pm.test('Shawn Initial', function() {",
+							"    pm.expect(pm.response.text()).to.include('360')",
+							"    pm.expect(pm.response.text()).to.include('Shawn Spencer')",
+							"    pm.expect(pm.response.text()).to.include('8015556789')",
+							"    pm.expect(pm.response.text()).to.include('pyschic@gmail.com')",
+							"    pm.expect(pm.response.text()).to.include('Greatest Detective')",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"360\",\n    \"name\": \"Shawn Spencer\",\n    \"phone\": \"8015556789\",\n    \"email\": \"pyschic@gmail.com\",\n    \"title\": \"Greatest Detective\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://peaceful-inlet-88854.herokuapp.com/api/employees",
+					"protocol": "https",
+					"host": [
+						"peaceful-inlet-88854",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Employee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "06b7e8a4-9e78-4c66-adb2-00cf37d1870e",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://peaceful-inlet-88854.herokuapp.com/api/employees",
+					"protocol": "https",
+					"host": [
+						"peaceful-inlet-88854",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Employee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1104eea8-17e3-442d-9826-2f5253f62ac1",
+						"exec": [
+							"pm.test('Shawn Fix', function() {",
+							"    pm.expect(pm.response.text()).to.include('360')",
+							"    pm.expect(pm.response.text()).to.include('Shawn Spencer')",
+							"    pm.expect(pm.response.text()).to.include('8015556789')",
+							"    pm.expect(pm.response.text()).to.include('pyschic101@gmail.com')",
+							"    pm.expect(pm.response.text()).to.include('Psychic')",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Shawn Spencer\",\n    \"phone\": \"8015556789\",\n    \"email\": \"pyschic101@gmail.com\",\n    \"title\": \"Psychic\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://peaceful-inlet-88854.herokuapp.com/api/employees/360?name=Shawn Spencer&phone=8015556789&title=Psychic&email=pyschic101@gmail.com",
+					"protocol": "https",
+					"host": [
+						"peaceful-inlet-88854",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"employees",
+						"360"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Shawn Spencer"
+						},
+						{
+							"key": "phone",
+							"value": "8015556789"
+						},
+						{
+							"key": "title",
+							"value": "Psychic"
+						},
+						{
+							"key": "email",
+							"value": "pyschic101@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b9c57688-5f2a-468b-9129-fde711a40174",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://peaceful-inlet-88854.herokuapp.com/api/employees/666",
+					"protocol": "https",
+					"host": [
+						"peaceful-inlet-88854",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"employees",
+						"666"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "22bf4b08-cc79-4417-afbf-5259592eebab",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d3d5851d-f405-403e-905f-59f83252210f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
