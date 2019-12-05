@@ -1,5 +1,5 @@
 var slack = {};
-var loginInfo = require('../../testAssets/logins/slack');
+var loginInfo = require('../../assets/logins/slack');
 module.exports = {
     before: browser => {
         slack = browser.page.slackPage()

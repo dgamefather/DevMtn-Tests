@@ -1,5 +1,5 @@
 var soph = {}
-var ohMy = require('../testAssets/sophiiAssets')
+var ohMy = require('../assets/sophiiAssets')
 module.exports = {
     before: browser => {
         soph = browser.page.sophiiPage();

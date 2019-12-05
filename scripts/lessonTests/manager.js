@@ -1,4 +1,4 @@
-var edit = require('../../testAssets/lessonTestAssets/employee-edit');
+var edit = require('../../assets/lessonTestAssets/employee-edit');
 var employee = {};
 module.exports = {
     beforeEach: browser => {

@@ -1,5 +1,5 @@
 var weatherPage = {}
-var city = require('../../testAssets/lessonTestAssets/city');
+var city = require('../../assets/lessonTestAssets/city');
 module.exports = {
     beforeEach: browser => {
         weatherPage = browser.page.weatherman()

@@ -1,5 +1,5 @@
 var psych = {};
-var data = require('../../testAssets/lessonTestAssets/databaseAssets');
+var data = require('../../assets/lessonTestAssets/databaseAssets');
 module.exports = {
     before: browser => {
         psych = browser.page.databasePage();
